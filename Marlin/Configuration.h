@@ -434,11 +434,11 @@
 
 #define TEMP_RESIDENCY_TIME     60  // (seconds) Time to wait for hotend to "settle" in M109
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
-#define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_HYSTERESIS          5  // (°C) Temperature proximity considered "close enough" to the target
 
 #define TEMP_BED_RESIDENCY_TIME 10  // (seconds) Time to wait for bed to "settle" in M190
 #define TEMP_BED_WINDOW          1  // (°C) Temperature proximity for the "temperature reached" timer
-#define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
+#define TEMP_BED_HYSTERESIS      5  // (°C) Temperature proximity considered "close enough" to the target
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
@@ -488,10 +488,17 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+
+  //E3D v6 Autotune values, 2.0.x, fan running full
+  #define DEFAULT_Kp 14.00
+  #define DEFAULT_Ki 0.67
+  #define DEFAULT_Kd 72.85
+
+
   //E3D v6 Autotune values, 2.0.x
-  #define DEFAULT_Kp 22.26
-  #define DEFAULT_Ki 1.38
-  #define DEFAULT_Kd 89.79
+  // #define DEFAULT_Kp 22.26
+  // #define DEFAULT_Ki 1.38
+  // #define DEFAULT_Kd 89.79
 
   // E3D v6 - Home-mades values  Marlin 1.1.9
   // #define  DEFAULT_Kp 23.57 
@@ -543,10 +550,16 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+  //Autotune value, 2.0.x, fan on full over bed
+  #define DEFAULT_bedKp 73.71
+  #define DEFAULT_bedKi 13.63
+  #define DEFAULT_bedKd 265.68
+
+
   //Autotune value, 2.0.x
-  #define DEFAULT_bedKp 79.59
-  #define DEFAULT_bedKi 15.67
-  #define DEFAULT_bedKd 269.48
+  // #define DEFAULT_bedKp 79.59
+  // #define DEFAULT_bedKi 15.67
+  // #define DEFAULT_bedKd 269.48
 
 
   //Autotune values, 1.1.9
@@ -1385,7 +1398,7 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (50*60)
+#define HOMING_FEEDRATE_XY (35*60)
 #define HOMING_FEEDRATE_Z  (4*60)
 
 // Validate that endstops are triggered on homing moves
