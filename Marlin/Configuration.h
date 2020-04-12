@@ -40,9 +40,7 @@
 
 #define E_STEPS_PER_MM ((3200 * 39.0)/(11.0 * 6.75 * 3.142))
 
-//#define Z_HEIGHT_MM (193.7455) // new thicker glass plate, e3dv6
-//#define Z_HEIGHT_MM (192.6955) // new thicker glass plate, e3dv6 TOO HIGH
-#define Z_HEIGHT_MM (192.7255) // new thicker glass plate, e3dv6 TOO HIGH
+#define Z_HEIGHT_MM (193.5000) // new thicker glass plate, e3dv6 
 
 //===========================================================================
 //============================= Getting Started =============================
