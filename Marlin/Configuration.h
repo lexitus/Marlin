@@ -490,10 +490,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+  //E3D v6 Autotune values, 2.0.x
+  #define DEFAULT_Kp 22.26
+  #define DEFAULT_Ki 1.38
+  #define DEFAULT_Kd 89.79
+
   // E3D v6 - Home-mades values  Marlin 1.1.9
-  #define  DEFAULT_Kp 23.57 
-  #define  DEFAULT_Ki 1.53   
-  #define  DEFAULT_Kd 90.76
+  // #define  DEFAULT_Kp 23.57 
+  // #define  DEFAULT_Ki 1.53   
+  // #define  DEFAULT_Kd 90.76
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -540,10 +545,11 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //Autotune values, 2.0.x
-  #define DEFAULT_Kp 22.26
-  #define DEFAULT_Ki 1.38
-  #define DEFAULT_Kd 89.79
+  //Autotune value, 2.0.x
+  #define DEFAULT_bedKp 79.59
+  #define DEFAULT_bedKi 15.67
+  #define DEFAULT_bedKd 269.48
+
 
   //Autotune values, 1.1.9
   // #define DEFAULT_bedKp 141.12 
