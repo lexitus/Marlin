@@ -23,7 +23,7 @@
 
 
 // 31 is Epcos B57861S104F40 100K 155C for bed only
-const short temptable_31[][2] PROGMEM = {
+const temp_entry_t temptable_31[] PROGMEM = {
     {     982,       200     }, // r=   300 adc=61.38
     {    1091,       195     }, // r=   336 adc=68.19
     {    1214,       190     }, // r=   376 adc=75.84
